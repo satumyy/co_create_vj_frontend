@@ -1,0 +1,260 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #6a5acd;
+  color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	font-size: 4vw;
+	text-align: center;
+	position: relative;
+	box-align: left;
+	margin-left: initial;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #6a5acd;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+
+y{
+	width: 100%;
+	background-image: url(space.jpeg);
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+}
+
+#header h2 {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: transparent;
+	font-family: 'Poiret One', cursive;
+	color: white;
+	font-size: 12vw;
+	text-shadow: 2px 2px 3px black, 0px 0px 10px #3C2F30;
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+
+#row1 {
+	background-color: #f0f0f0;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	float: left; 
+	box-align: left;
+	width: 100%;
+	margin-left: initial;
+	font-family: 'Raleway', sans-serif;
+	font-size: 4vw;
+	text-align: center;
+}
+
+
+#create {
+	background-color: #e0e0eb;
+}
+
+
+#row1 p{
+	padding:2%;
+}
+
+#row1 h1{
+	font-family: 'Poiret One', cursive;
+	font-size: 6.5vw;
+	padding-top: 0%;
+	padding-bottom: :2%;
+
+}
+
+
+
+
+#column1 {
+	float: left;
+    width: 50%;
+    padding: 0;
+	background-color: #f0f0f0;
+	margin: 0;
+	position: relative;
+	box-align: left;
+	margin-left: initial;
+	font-family: 'Raleway', sans-serif;
+	font-size: 4vw;
+}
+
+#column1 p{
+	padding-right: 10%;
+	padding-left: 10%;
+	padding-top: 1%;
+	background-color: #f0f0f0;
+}
+
+
+#noiseChoicesBG {display: none;}
+
+#geometryLoopChoicesBG {display: none;}
+
+#munchingSquaresChoicesBG {display: none;}
+
+#colorGridChoicesBG {display: none;}
+
+#fractalTilingChoicesBG {display: none;}
+
+#spiralChoicesBG {display: none;}
+
+
+#cubeChoicesFG {display: none;}
+
+#geometryLoopChoicesFG {display: none;}
+
+#munchingSquaresChoicesFG {display: none;}
+
+#spiralChoicesFG {display: none;}
+
+
+#blurChoicesF {display: none;}
+
+#pixelizeChoicesF {display: none;}
+
+#trippyChoicesF {display: none;}
+
+#kaleidoscopeChoicesF {display: none;}
+
+#distortionChoicesF {display: none;}
+
+
+#dropdown {
+	box-sizing: border-box;
+	padding:5%;
+}
+
+
+
+
+.slidecontainer {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.5;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #6a5acd;
+
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #6a5acd;
+
+}
+
+
+
+#footer {
+	background-color: transparent;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5vw;
+	width: 100%;
+	margin-left: initial;
+	float: center;
+	text-align: center;
+	padding-top: 40%;
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>CO-CREATE VJ</title>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<section id="header">
+		<h2>CO-CREATE VJ</h2>
+	</section>
+
+
+
+	<main>
+		
+
+	<article id="row1">
+		<br>
+		<h1 id ="description">What is co-create VJ?</h1>
+		<p>Have you ever wanted to be part of creating amazing visual efects? Now it is your chance.<br></p>
+		
+	</article>
+
+
+	<article id="row1">
+		<br>
+		<h1 id ="description">Select new background effect:</h1>
+		
+		<p><button onclick="changeEffect('BACKGROUND','clock')">CLOCK</button></p>
+			
+		<p><button onclick="showChoices('noiseChoicesBG')">NOISE</button></p>
+			
+    		<div class="slidecontainer" id="noiseChoicesBG">
+  
+  				<p>Width:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="widthBGN">
+
+  				<p>Height:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="heightBGN">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('BACKGROUND','noise');">CO-CREATE</button>
+  				<br><br>
+  				
+			</div>
+  			
+
+		<p><button onclick="showChoices('geometryLoopChoicesBG')">GEOMETRY LOOP</button></p>
+			<div class="slidecontainer" id="geometryLoopChoicesBG">
+  
+  				<p>R:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="redBGGL">
+
+  				<p>G:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="greenBGGL">
+
+  				<p>B:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="blueBGGL">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('BACKGROUND','geometryLoop');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+		<p><button onclick="showChoices('munchingSquaresChoicesBG')">MUNCHING SQUARES</button></p>
+			<div class="slidecontainer" id="munchingSquaresChoicesBG">
+  
+  				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedBGMS">
+
+  				<p>Threshold:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="thresholdBGMS">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('BACKGROUND','munchingSquares');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+		<p><button onclick="showChoices('colorGridChoicesBG')">COLOR GRID</button></p>
+			<div class="slidecontainer" id="colorGridChoicesBG">
+
+				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedBGCG">
+  
+  				<p>Width:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="widthBGCG">
+
+  				<p>Height:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="heightBGCG">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('BACKGROUND','colorGrid');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+		<p><button onclick="showChoices('fractalTilingChoicesBG')">FRACTAL TILING</button></p>
+			<div class="slidecontainer" id="fractalTilingChoicesBG">
+
+				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedBGFT">
+  
+  				<p>Width:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="widthBGFT">
+
+  				<p>Height:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="heightBGFT">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('BACKGROUND','fractalTiling');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+		<p><button onclick="showChoices('spiralChoicesBG')">SPIRAL</button></p>
+			<div class="slidecontainer" id="spiralChoicesBG">
+  
+  				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedBGS">
+
+  				<p>Thickness:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="thicknessBGS">
+
+  				<p>Curve bent:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="bendBGS">
+
+  				<p>Curve degrees:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="degreesBGS">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('BACKGROUND','spiral');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+
+
+	</article>
+
+
+
+
+
+
+	<article id="row1">
+		<br>
+		<h1 id ="description">Select new foreground effect:</h1>
+		<p><button onclick="changeEffect('FOREGROUND','empty')"> EMPTY</button></p>
+		
+		<p><button onclick="changeEffect('FOREGROUND','clock')">CLOCK</button></p>
+
+		<p><button onclick="showChoices('cubeChoicesFG')">CUBE</button></p>
+			
+    		<div class="slidecontainer" id="cubeChoicesFG">
+  
+  				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedFGC">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('FOREGROUND','cube');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+		<p><button onclick="showChoices('geometryLoopChoicesFG')">GEOMETRY LOOP</button></p>
+			<div class="slidecontainer" id="geometryLoopChoicesFG">
+  				
+  				<p>R:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="redFGGL">
+
+  				<p>G:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="greenFGGL">
+
+  				<p>B:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="blueFGGL">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('FOREGROUND','geometryLoop');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+		<p><button onclick="showChoices('munchingSquaresChoicesFG')">MUNCHING SQUARES</button></p>
+			<div class="slidecontainer" id="munchingSquaresChoicesFG">
+
+  				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedFGMS">
+
+  				<p>Threshold:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="thresholdFGMS">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('FOREGROUND','munchingSquares');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+		<p><button onclick="showChoices('spiralChoicesFG')">SPIRAL</button></p>
+			<div class="slidecontainer" id="spiralChoicesFG">
+  
+  				<p>Speed:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="speedFGS">
+
+  				<p>Thickness:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="thicknessFGS">
+
+  				<p>Curve bent:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="bendFGS">
+
+  				<p>Curve degrees:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="degreesFGS">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('FOREGROUND','spiral');">CO-CREATE</button>
+  				<br><br>
+			</div>
+	</article>
+
+
+
+	<article id="row1">
+		<br>
+		<h1 id ="description">Select new filter:</h1>
+		<p><button onclick="changeEffect('FILTER','empty')"> EMPTY</button></p>
+
+		<p><button onclick="showChoices('blurChoicesF')">BLUR</button></p>
+			<div class="slidecontainer" id="blurChoicesF">
+  				<p>Amount:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="blurFB">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('FILTER','blur');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+
+		<p><button onclick="showChoices('pixelizeChoicesF')">PIXELIZE</button></p>
+			<div class="slidecontainer" id="pixelizeChoicesF">
+  				<p>Width:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="widthFP">
+
+  				<p>Height:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="heightFP">
+  				
+  				<br>
+  				<button id="create" onclick="changeEffect('FILTER','pixelize');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+		<p><button onclick="changeEffect('FILTER','trippy')">TRIPPY</button></p>
+
+
+		<p><button onclick="showChoices('kaleidoscopeChoicesF')">KALEIDOSCOPE</button></p>
+			<div class="slidecontainer" id="kaleidoscopeChoicesF">
+  				<p>Angle:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="angleFK">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('FILTER','kaleidoscope');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+		<p><button onclick="showChoices('distortionChoicesF')">DISTORTION</button></p>
+			<div class="slidecontainer" id="distortionChoicesF">
+  				<p>Width:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="widthFD">
+
+  				<p>Height:</p>
+  				<input type="range" min="1" max="100" value="50" class="slider" id="heightFD">
+
+  				<br>
+  				<button id="create" onclick="changeEffect('FILTER','distortion');">CO-CREATE</button>
+  				<br><br>
+			</div>
+
+	</article>
+
+	<article id="row1">
+		<br>
+		<h1 id ="description">Select new stencil:</h1>
+
+		<div class="slidecontainer" >
+		<select id="dropdown">
+  			<option value="2">CROSS</option>
+  			<option value="3">TRIANGLE</option>
+  			<option value="4">HEXAGON</option>
+  			<option value="5">STAR</option>
+  			<option value="6">CIRCLE</option>
+		</select>
+
+		<p>Rotation:</p>
+  		<input type="range" min="1" max="100" value="50" class="slider" id="speedSS">
+
+		<p>Width:</p>
+  		<input type="range" min="1" max="100" value="50" class="slider" id="widthSS">
+
+  		<p>Height:</p>
+  		<input type="range" min="1" max="100" value="50" class="slider" id="heightSS">
+  		</div>
+
+  		<br>
+		<p><button onclick="changeEffect('STENCIL','stencil')">CHANGE STENCIL</button></p>
+		<br>
+
+	</article>
+
+
+	<article id="row1">
+		<br>
+		<h1 id ="description">Adjust colors:</h1>
+
+		<div class="slidecontainer" >
+
+		<p>Brightness:</p>
+  		<input type="range" min="1" max="100" value="50" class="slider" id="gammaAA">
+
+  		<p>Saturation:</p>
+  		<input type="range" min="1" max="100" value="50" class="slider" id="saturationAA">
+  		</div>
+
+  		<br>
+		<p><button onclick="changeEffect('ADJUST','adjust')">ADJUST</button></p>
+		<br>
+
+	</article>
+
+
+	<div id="myModal" class="modal">
+
+  		<!-- Modal content -->
+  		<div class="modal-content">
+    		<div class="modal-body">
+      			<span class="close">&times;</span>
+    		</div>
+    		<div class="modal-body">
+      			<p>CO-CREATED!</p>
+    		</div>
+  		</div>
+
+	</div> 
+
+
+
+
+
+		
+
+
+	<script>
+
+		var modal = document.getElementById('myModal');
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		// When the user clicks the button, open the modal 
+
+		function showModal() {
+  			modal.style.display = "block";
+		}
+
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+  			modal.style.display = "none";
+		}
+
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+  			if (event.target == modal) {
+    			modal.style.display = "none";
+  			}
+		}
+
+
+	
+		function showChoices(id) {
+    		document.getElementById(id).classList.toggle("show");
+		}
+
+		function changeEffect(layer, effect) {
+			var request = { "action": "ADD_EVENT","event": {"layer": layer,"effect": { "name": effect}}}
+
+			if (layer == 'BACKGROUND' && effect == 'noise') {
+				request.event.effect.variable = [
+					{ "name": "sizeX","type": "float","value": [valueToRange(document.getElementById('widthBGN').value,0.01,1.0)]},
+					{ "name": "sizeY","type": "float","value": [valueToRange(document.getElementById('heightBGN').value,0.01,1.0)]}
+				];
+			} else if (layer == 'BACKGROUND' && effect == 'geometryLoop') {
+				request.event.effect.variable = [
+					{ "name": "r","type": "float","value": [valueToRange(document.getElementById('redBGGL').value,0.02,1.0)]},
+					{ "name": "g","type": "float","value": [valueToRange(document.getElementById('greenBGGL').value,0.02,1.0)]},
+					{ "name": "b","type": "float","value": [valueToRange(document.getElementById('blueBGGL').value,0.02,1.0)]}
+				];
+			} else if (layer == 'BACKGROUND' && effect == 'munchingSquares') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedBGMS').value,0.1,10.0)]},
+					{ "name": "threshold","type": "float","value": [valueToRange(document.getElementById('thresholdBGMS').value,-1.0,1.0)]}
+				];
+			} else if (layer == 'BACKGROUND' && effect == 'colorGrid') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedBGCG').value,0.1,10.0)]},
+					{ "name": "sizeX","type": "float","value": [valueToRange(document.getElementById('widthBGCG').value,0.0,100.0)]},
+					{ "name": "sizeY","type": "float","value": [valueToRange(document.getElementById('heightBGCG').value,0.0,100.0)]}
+				];
+			} else if (layer == 'BACKGROUND' && effect == 'fractalTiling') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedBGFT').value,0.1,10.0)]},
+					{ "name": "sizeX","type": "float","value": [valueToRange(document.getElementById('widthBGFT').value,0.0,100.0)]},
+					{ "name": "sizeY","type": "float","value": [valueToRange(document.getElementById('heightBGFT').value,0.0,100.0)]}
+				];
+			} else if (layer == 'BACKGROUND' && effect == 'spiral') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedBGS').value,0.1,10.0)]},
+					{ "name": "curveThickness","type": "float","value": [valueToRange(document.getElementById('thicknessBGS').value,0.1,1.0)]},
+					{ "name": "curveBendDegrees","type": "float","value": [valueToRange(document.getElementById('bendBGS').value,-180,360)]},
+					{ "name": "curvesDegrees","type": "float","value": [valueToRange(document.getElementById('degreesBGS').value,-180,360)]}
+				];
+			} else if (layer == 'FOREGROUND' && effect == 'cube') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedFGC').value,0.1,10.0)]}
+				];
+			} else if (layer == 'FOREGROUND' && effect == 'geometryLoop') {
+				request.event.effect.variable = [
+					{ "name": "r","type": "float","value": [valueToRange(document.getElementById('redFGGL').value,0.02,1.0)]},
+					{ "name": "g","type": "float","value": [valueToRange(document.getElementById('greenFGGL').value,0.02,1.0)]},
+					{ "name": "b","type": "float","value": [valueToRange(document.getElementById('blueFGGL').value,0.02,1.0)]}
+				];
+			} else if (layer == 'FOREGROUND' && effect == 'munchingSquares') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedFGMS').value,0.1,10.0)]},
+					{ "name": "threshold","type": "float","value": [valueToRange(document.getElementById('thresholdFGMS').value,-1.0,1.0)]}
+				];
+			} else if (layer == 'FOREGROUND' && effect == 'spiral') {
+				request.event.effect.variable = [
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedFGS').value,0.1,10.0)]},
+					{ "name": "curveThickness","type": "float","value": [valueToRange(document.getElementById('thicknessFGS').value,0.1,1.0)]},
+					{ "name": "curveBendDegrees","type": "float","value": [valueToRange(document.getElementById('bendFGS').value,-180,360)]},
+					{ "name": "curvesDegrees","type": "float","value": [valueToRange(document.getElementById('degreesFGS').value,-180,360)]}
+				];
+			} else if (layer == 'FILTER' && effect == 'blur') {
+				request.event.effect.variable = [
+					{ "name": "blur","type": "float","value": [valueToRange(document.getElementById('blurFB').value,0.1,1.0)]}
+				];
+			} else if (layer == 'FILTER' && effect == 'pixelize') {
+				request.event.effect.variable = [
+					{ "name": "pixelX","type": "float","value": [valueToRange(document.getElementById('widthFP').value,0.01,0.5)]},
+					{ "name": "pixelY","type": "float","value": [valueToRange(document.getElementById('heightFP').value,0.01,0.5)]}
+				];
+			} else if (layer == 'FILTER' && effect == 'kaleidoscope') {
+				request.event.effect.variable = [
+					{ "name": "kaleidoscopeXangle","type": "float","value": [valueToRange(document.getElementById('angleFK').value,1.0,50.0)]}
+				];
+			} else if (layer == 'FILTER' && effect == 'distortion') {
+				request.event.effect.variable = [
+					{ "name": "sizeX","type": "float","value": [valueToRange(document.getElementById('widthFD').value,0.1,1.0)]},
+					{ "name": "sizeY","type": "float","value": [valueToRange(document.getElementById('heightFD').value,0.1,1.0)]}
+				];
+			} else if (layer == 'STENCIL' && effect == 'stencil') {
+				request.event.effect.variable = [
+					{ "name": "type","type": "int","value": [document.getElementById('dropdown').value]},
+					{ "name": "speed","type": "float","value": [valueToRange(document.getElementById('speedSS').value,50.0,-50.0)]},
+					{ "name": "sizeX","type": "float","value": [valueToRange(document.getElementById('widthSS').value,0.7,2.0)]},
+					{ "name": "sizeY","type": "float","value": [valueToRange(document.getElementById('heightSS').value,0.7,2.0)]}
+				];
+			} else if (layer == 'ADJUST' && effect == 'adjust') {
+				request.event.effect.variable = [
+					{ "name": "gamma","type": "float","value": [valueToRange(document.getElementById('gammaAA').value,1.0,50.0)]},
+					{ "name": "saturation","type": "float","value": [valueToRange(document.getElementById('saturationAA').value,0.0,100.0)]}
+				];
+			}
+
+			// xxx = subdomain masked
+			var req = new XMLHttpRequest();
+			req.open("POST", "https://xxx.execute-api.eu-west-1.amazonaws.com/Prod/decompression-vj-controller", true);
+			req.setRequestHeader("Content-Type", "application/json");
+			req.send(JSON.stringify(request));
+
+			showModal();
+		}
+
+
+		function valueToRange(value, min, max){
+			return ((max-min)*(parseFloat(value)/100.0)+min).toString(10);
+		}
+
+	</script>
+
+
+	
+
+	</main>
+	
+
+	<section id="footer">
+		<p>CO-CREATE VJ BY JML.<br>Visuals: Munching Squares by noby. Clock, trippy, colorgrid, fractal <br>
+		tiling by inigo quilez iq CC BY-NC-SA 3.0. Website and engine: backend waffle and frontend myy</p>
+
+	</section>
+
+
+
+</body>
+
+</html>
